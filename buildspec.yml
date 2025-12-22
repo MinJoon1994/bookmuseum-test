@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+
+  pre_build:
+    commands:
+      - echo "Start build"
+      - chmod +x ./gradlew
+
+  build:
+    commands:
+      - ./gradlew clean build -x test
+
+  post_build:
+    commands:
+      - echo "Build completed"
+      - cp build/libs/*.jar app.jar
+
+artifacts:
+  files:
+    - appspec.yml
+    - stop.sh
+    - start.sh
+    - health_check.sh
+    - app.jar
