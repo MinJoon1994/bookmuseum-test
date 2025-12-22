@@ -11,7 +11,6 @@ phases:
       - chmod +x ./gradlew
       - chmod +x start.sh
       - chmod +x stop.sh
-      - chmod +x health_check.sh
 
   build:
     commands:
@@ -27,5 +26,4 @@ artifacts:
     - appspec.yml
     - stop.sh
     - start.sh
-    - health_check.sh
     - app.jar
