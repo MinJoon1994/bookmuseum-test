@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/api/books")
 @CrossOrigin("*")
 public class BookController {
-    //test2
+    //test3
     private final BookService bookService;
     private final MemberService memberService;
 
