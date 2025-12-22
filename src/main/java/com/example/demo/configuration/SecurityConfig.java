@@ -54,6 +54,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/books/**").authenticated()
                         .requestMatchers("/api/comments/**").authenticated()
                         .requestMatchers("/api/mypage/**").authenticated()
+                        .requestMatchers("/health").permitAll()
 
                         .anyRequest().authenticated()
                 )
