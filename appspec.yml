@@ -14,6 +14,10 @@ files:
     destination: /home/ec2-user/app
     overwrite: yes
 
+  - source: cleanup.sh
+    destination: /home/ec2-user/app
+    overwrite: yes
+
 permissions:
   - object: /home/ec2-user/app
     owner: ec2-user
@@ -21,6 +25,11 @@ permissions:
     mode: 755
 
 hooks:
+  BeforeInstall:
+    - location: cleanup.sh
+      timeout: 30
+      runas: ec2-user
+
   ApplicationStop:
     - location: stop.sh
       timeout: 60
