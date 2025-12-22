@@ -6,6 +6,14 @@ files:
     destination: /home/ec2-user/app
     overwrite: yes
 
+  - source: start.sh
+    destination: /home/ec2-user/app
+    overwrite: yes
+
+  - source: stop.sh
+    destination: /home/ec2-user/app
+    overwrite: yes
+
 permissions:
   - object: /home/ec2-user/app
     owner: ec2-user
