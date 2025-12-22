@@ -9,6 +9,9 @@ phases:
     commands:
       - echo "Start build"
       - chmod +x ./gradlew
+      - chmod +x start.sh
+      - chmod +x stop.sh
+      - chmod +x health_check.sh
 
   build:
     commands:
