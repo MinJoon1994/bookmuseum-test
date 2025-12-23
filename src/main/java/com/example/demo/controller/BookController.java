@@ -20,7 +20,7 @@ import java.util.List;
 @CrossOrigin("*")
 public class BookController {
 
-    //test3
+    //수동 승인 테스트 주석
 
     private final BookService bookService;
     private final MemberService memberService;
